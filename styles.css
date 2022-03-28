@@ -1,0 +1,120 @@
+header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: wheat;
+  height: 70px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.header-buttons {
+  height: 70px;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.header-buttons:hover {
+  box-sizing: border-box;
+  box-shadow: 0px -2px 0px 0px rgba(34, 60, 80, 0.2) inset;
+}
+
+.header-blocks {
+  height: 70px;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-for-tables {
+  text-align: center;
+  margin: 10px 0;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid #444444;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+}
+
+.main-block-with-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.main-block-with-content__left-block, .main-block-with-content__right-block {
+  width: 370px;
+  background-color: blueviolet;
+  height: 700px;
+}
+.main-block-with-content__element {
+  background-color: red;
+  margin-bottom: 4px;
+}
+
+.list-of-workers-and-orders, .section-with-ten-elements__header {
+  list-style-type: none;
+  box-sizing: border-box;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.section-with-ten-elements__header {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.tile {
+  text-align: center;
+}
+
+.order-info-tile, .worker-info-tile {
+  display: flex;
+}
+.order-info-tile__id, .worker-info-tile__id {
+  width: 50px;
+}
+.order-info-tile__name, .worker-info-tile__name {
+  width: 70px;
+}
+.order-info-tile__efficiency, .worker-info-tile__efficiency {
+  width: 50px;
+}
+.order-info-tile__money, .worker-info-tile__money {
+  width: 50px;
+}
+.order-info-tile__rating, .worker-info-tile__rating {
+  width: 50px;
+}
+.order-info-tile__days-to-delete, .worker-info-tile__days-to-delete {
+  width: 100px;
+}
+.order-info-tile__days-in-company, .worker-info-tile__days-in-company {
+  width: 100px;
+}
+.order-info-tile__button, .worker-info-tile__button {
+  width: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */

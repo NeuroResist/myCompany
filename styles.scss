@@ -1,0 +1,138 @@
+header{
+  display: flex;
+  justify-content: flex-end;
+  background-color: wheat;
+  height: 70px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.container{
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+.header-buttons{
+  height: 70px;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+.header-buttons:hover{
+  box-sizing: border-box;
+  box-shadow: 0px -2px 0px 0px rgba(34, 60, 80, 0.2) inset;
+}
+.header-blocks{
+  height: 70px;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.header-for-tables{
+  text-align: center;
+  margin: 10px 0;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+}
+.main-block-with-content{
+  display: flex;
+  justify-content: space-evenly;
+  &__left-block, &__right-block{
+    width: 370px;
+    background-color: blueviolet;
+    height: 700px;
+  }
+  &__element{
+    background-color: red;
+    margin-bottom: 4px;
+  }
+
+}
+.list-of-workers-and-orders,.section-with-ten-elements__header{
+  list-style-type: none;
+  box-sizing: border-box;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.section-with-ten-elements{
+  &__header{
+    display: flex;
+    margin-bottom: 4px;
+
+  }
+}
+.tile{
+  text-align: center;
+
+}
+.order-info-tile, .worker-info-tile{
+  display: flex;
+  &__id{
+    width: 50px;
+  }
+  &__name{
+    width: 70px;
+  }
+  &__efficiency{
+    width: 50px;
+  }
+  &__money{
+    width: 50px;
+  }
+  &__rating{
+    width: 50px;
+  }
+  &__days-to-delete{
+    width: 100px;
+  }
+  &__days-in-company{
+    width: 100px;
+  }
+  &__button{
+    width: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

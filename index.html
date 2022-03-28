@@ -1,14 +1,89 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles.css">
     <title>Document</title>
 </head>
 <body>
-dasdas
+<header>
+    <section>
+        <button class="header-buttons">Next Day</button>
+    </section>
+    <section class="header-blocks">Rating:</section>
+    <section class="header-blocks">Money:</section>
+    <section class="header-blocks">Day:</section>
+</header>
+<main>
+    <div class="main-block-with-content container">
+
+
+        <article class="main-block-with-content__left-block">
+
+            <section class="section-with-ten-elements">
+                <h3 class="header-for-tables">Нанять Сотрудников</h3>
+                <div class="tile section-with-ten-elements__header">
+                    <div class="tile worker-info-tile__id">Id</div>
+                    <div class="tile worker-info-tile__name">Name</div>
+                    <div class="tile worker-info-tile__money">Money</div>
+                    <div class="tile worker-info-tile__efficiency">Effic.</div>
+                    <div class="tile worker-info-tile__days-to-delete">Days to delete</div>
+                </div>
+                <ul class="list-of-workers-and-orders not-hired-workers">
+
+                </ul>
+            </section>
+
+            <section class="section-with-ten-elements">
+                <h3 class="header-for-tables">Взять Заказ</h3>
+                <div class="tile section-with-ten-elements__header">
+                    <div class="tile order-info-tile__id">Id</div>
+                    <div class="tile order-info-tile__name">Name</div>
+                    <div class="tile order-info-tile__money">Money</div>
+                    <div class="tile order-info-tile__rating">Rating</div>
+                    <div class="tile order-info-tile__days-to-delete">Days to delete</div>
+                </div>
+                <ul class="list-of-workers-and-orders not-taken-order">
+
+                </ul>
+            </section>
+        </article>
+
+        <article class="main-block-with-content__right-block">
+            <section class="section-with-ten-elements">
+                <h3 class="header-for-tables">Мои Сотрудники</h3>
+                <div class="tile section-with-ten-elements__header">
+                    <div class="tile worker-info-tile__id">Id</div>
+                    <div class="tile worker-info-tile__name">Name</div>
+                    <div class="tile worker-info-tile__money">Money</div>
+                    <div class="tile worker-info-tile__efficiency">Effic.</div>
+                    <div class="tile worker-info-tile__days-in-company">In Company</div>
+                </div>
+                <ul class="list-of-workers-and-orders my-workers">
+
+                </ul>
+            </section>
+
+            <section class="section-with-ten-elements">
+                <h3 class="header-for-tables">Мои Заказы</h3>
+                <div class="tile section-with-ten-elements__header">
+                    <div class="tile order-info-tile__id">Id</div>
+                    <div class="tile order-info-tile__name">Name</div>
+                    <div class="tile order-info-tile__money">Money</div>
+                    <div class="tile order-info-tile__rating">Rating</div>
+                    <div class="tile order-info-tile__days-to-delete">Days to Do</div>
+                </div>
+                <ul class="list-of-workers-and-orders my-orders">
+
+                </ul>
+            </section>
+        </article>
+
+    </div>
+</main>
 <script src="scripts/constructors.js"></script>
 </body>
 </html>
