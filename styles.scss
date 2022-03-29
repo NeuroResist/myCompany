@@ -57,16 +57,17 @@ header{
   justify-content: space-evenly;
   &__left-block, &__right-block{
     width: 370px;
-    background-color: blueviolet;
+    background-color: #f6e5c6;
     height: 700px;
   }
   &__element{
-    background-color: red;
+    background-color: #f6dba3;
     margin-bottom: 4px;
   }
 
 }
 .list-of-workers-and-orders,.section-with-ten-elements__header{
+  overflow: scroll;
   list-style-type: none;
   box-sizing: border-box;
   padding-right: 10px;
@@ -82,7 +83,6 @@ header{
 }
 .tile{
   text-align: center;
-
 }
 .order-info-tile, .worker-info-tile{
   display: flex;
@@ -112,7 +112,19 @@ header{
   }
 }
 
-
+ul{
+  height: 250px;
+  overflow: scroll;
+}
+li{
+  align-items: center;
+}
+.section-with-ten-elements__header > div{
+  font-weight: bold;
+}
+article{
+  border: 2px #b7b7b7 solid;
+}
 
 
 
