@@ -488,6 +488,9 @@ function Game() {
         for (let i = 0; i < this.myCompany.getOrder().length; i++)
             render(this.myCompany.getOrder(i), "takenOrder", document.querySelector(".my-orders"))
     }
+    this.loader=()=>{
+        document.querySelector(".loader").style.display = "none";
+    }
 
     // Следующий день
     this.nextDay = () => {
@@ -496,10 +499,13 @@ function Game() {
         nextDayForWorkersAndOrders();
         newDayRender();
         this.aboutGame();
+
         // Выставление значений в Header
         document.querySelector(".rating").innerText = "Rating: " + this.myCompany.getRating().toFixed(2);
         document.querySelector(".money").innerText = "Money: " + this.myCompany.getMoney();
         document.querySelector(".day").innerText = "Day: " + this.days;
+        document.querySelector(".loader").style.display = "block";
+        setTimeout(this.loader, 200);
     }
 
 

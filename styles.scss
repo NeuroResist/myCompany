@@ -125,7 +125,11 @@ li{
 article{
   border: 2px #b7b7b7 solid;
 }
-
+.loader{
+  width: 75px;
+  height: 75px;
+  display: none;
+}
 
 // Модалка
 .modal {
