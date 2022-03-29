@@ -67,7 +67,7 @@ header{
 
 }
 .list-of-workers-and-orders,.section-with-ten-elements__header{
-  overflow: scroll;
+  overflow: auto;
   list-style-type: none;
   box-sizing: border-box;
   padding-right: 10px;
@@ -114,7 +114,7 @@ header{
 
 ul{
   height: 250px;
-  overflow: scroll;
+  overflow: auto;
 }
 li{
   align-items: center;

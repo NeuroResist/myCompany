@@ -26,6 +26,10 @@ const WORKERNAMES = [
     "Ярик",
 ]
 
+
+
+
+
 const render = (obj, whatIsIt, innerTo, hire) => {
     // Распределить по переменным данные из переданного объекта
     const idText = obj.getId();
@@ -116,7 +120,7 @@ const render = (obj, whatIsIt, innerTo, hire) => {
 function Company() {
     let money = Math.floor(Math.random() * 100 + 50);      // Количество денег, целочисленное от 50 до 150
     let rating = Math.floor(Math.random() * 50) / 100 + 0.5;// Рейтинг компании от 0.5 до 1
-    let workers = [];                                  // Список сотрудников, приходят из другого класса
+    let workers = [];                                       // Список сотрудников, приходят из другого класса
     let orderList = [];                                // Список заказов, приходят из другого класса
 
     // GETTERS и SETTERS
