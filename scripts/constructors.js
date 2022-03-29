@@ -27,6 +27,22 @@ const WORKERNAMES = [
 ]
 
 
+// Модалка
+let modal = document.querySelector("#myModal");
+let btn = document.querySelector(".myBtn");
+let span = document.querySelector(".close");
+// Когда пользователь нажимает на кнопку, открыть модалку
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 
@@ -67,16 +83,25 @@ const render = (obj, whatIsIt, innerTo, hire) => {
             if (+elem.firstChild.textContent === obj.getId()) {
                 if (whatIsIt === "notHiredWorker") {
                     a.hireToMyCompany(i);
+                    document.querySelector(".my-workers").innerHTML = "";
+                    for (let i = 0; i < a.myCompany.getWorkers().length; i++) {
+                        render(a.myCompany.getWorkers(i), "hiredWorker", document.querySelector(".my-workers"))
+                    }
                 } else if (whatIsIt === "hiredWorker") {
                     a.fireWorker(i)
                 } else if (whatIsIt === "notTakenOrder") {
                     a.takeOrderToMyCompany(i)
-                } else {
-                    alert();
+                    document.querySelector(".my-orders").innerHTML = "";
+                    for (let i = 0; i < a.myCompany.getOrder().length; i++) {
+                        render(a.myCompany.getOrder(i), "takenOrder", document.querySelector(".my-orders"))
+                    }
+                } else if ("takenOrder"){
+                    a.rejectOrder(i);
+                    a.myCompany.setRating(-ratingText*10);
                 }
+                button.parentElement.parentElement.removeChild(button.parentElement);
             }
         })
-        button.parentElement.parentElement.removeChild(button.parentElement);
     }
 
 
@@ -103,10 +128,8 @@ const render = (obj, whatIsIt, innerTo, hire) => {
     element.appendChild(money)
     element.appendChild(rating)
     element.appendChild(days)
-    if (whatIsIt !== "takenOrder") {
-        element.appendChild(button)
-    }
-    if(whatIsIt === "hiredWorker"){
+    element.appendChild(button)
+    if(whatIsIt === "hiredWorker" || whatIsIt === "takenOrder"){
         button.innerText = "✘"
     }
 
@@ -144,6 +167,9 @@ function Company() {
     }
     this.dismiss = function (id) {                      // Уволить сотрудника
         workers.splice(id, 1);
+    };
+    this.refuseOrder = function (id) {                   // Отказаться от заказа
+        orderList.splice(id, 1);
     };
     this.setOrder = function (order) {                  // Взять себе заказ
         orderList.push(order);
@@ -352,6 +378,9 @@ function Game() {
     this.fireWorker = (id) => {                           // Уволить сотрудника, отсылает в функцию в myCompany
         this.myCompany.dismiss(id);
     }
+    this.rejectOrder = (id)=>{
+        this.myCompany.refuseOrder(id)
+    }
 
 
     this.aboutGame = () => {
@@ -471,16 +500,17 @@ function Game() {
         document.querySelector(".rating").innerText = "Rating: " + this.myCompany.getRating().toFixed(2);
         document.querySelector(".money").innerText = "Money: " + this.myCompany.getMoney();
         document.querySelector(".day").innerText = "Day: " + this.days;
-
     }
 
 
 // Кнопка Next Day в Header
     document.querySelector(".header-buttons").onclick = () => {
         if(this.myCompany.getRating() >=2){
-            alert("Рейтинг >=2, Вы победили")
+            alert("Рейтинг >= 2, Вы победили")
+        } else if (this.myCompany.getRating() <=0) {
+            alert("Рейтинг <= 0, Игра окончена")
         } else if (this.myCompany.getMoney() <= 0) {
-            alert("Денег < 0, Игра окончена")
+            alert("Денег <= 0, Игра окончена")
         } else {
             this.nextDay();
         }

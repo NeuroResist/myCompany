@@ -127,7 +127,57 @@ article{
 }
 
 
+// Модалка
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Сидеть на вершине */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: hidden; /* Включите прокрутку, если это необходимо */
+  background-color: rgb(0,0,0); /* Цвет запасной вариант */
+  background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+.modal-button{
 
+}
+.modal-rules{
+  margin-right: 20px;
+}
+.modal-content {
+  height: 80vh;
+  overflow: auto;
+  background-color: #fefefe;
+  margin: 100px auto 0 auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+.modal-header{
+  margin-bottom: 10px;
+  font-size: 34px;
+}
+.modal-content > p{
+  font-size: 18px;
+}
+.close {
+  font-family: Impact, Charcoal, sans-serif;
+  color: black;
+  font-size: 20px;
+  background-color: wheat;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+}
+.modal-header{
+  text-align: center;
+}
+.close:hover, .close:focus {
+}
 
 
 
