@@ -55,7 +55,9 @@ header{
 .main-block-with-content{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   &__left-block, &__right-block{
+    margin: 20px;
     width: 370px;
     background-color: #f6e5c6;
     height: 700px;
